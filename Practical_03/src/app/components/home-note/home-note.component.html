@@ -1,0 +1,23 @@
+@if(notelist.length == 0){
+    <div class="container">
+        <h2>Your Notes</h2>
+        <div>
+            <h4><strong>No notes found.</strong></h4>
+        </div>
+    </div>
+}@else{
+    <div class="container">
+        <h2>Your Notes</h2>
+        @for (note of notelist; track note.id) {
+            <div class="card" [ngClass]="getNoteClass(note)">
+                <div class="card-header">
+                    <h4 [routerLink]="['/note', note.id]">{{ note.title }}</h4>
+                </div>
+                <div class="buttons" *ngIf="note.status !== 'DELETED'">
+                    <button class="btn btn-primary" [routerLink]="['/edit',note.id]">Edit</button>
+                    <button class="btn btn-danger" (click)="deleteNote(note)">Delete</button>
+                </div>
+            </div>
+        }
+    </div>
+}

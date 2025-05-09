@@ -1,0 +1,21 @@
+@if (!note) {
+    <div class="main">
+        <h2>Note not found</h2>
+    </div>
+}@else {
+    <div class="main">
+        <div class="container">
+            <div class="title">
+                {{ note.title }}
+            </div>
+            <div class="description">
+                {{ note.description }}
+            </div>
+            <div class="buttons" *ngIf="note.status !== 'DELETED'">
+                <button class="btn btn-primary" [routerLink]="['/edit',note.id]">Edit</button>
+                <button class="btn btn-danger" (click)="deleteNote(note)">Delete</button>
+            </div>
+            <p>Created At: {{ note.date.getDate() }}/{{ note.date.getMonth()+1 }}/{{ note.date.getFullYear() }}</p>
+        </div>
+    </div>
+}
