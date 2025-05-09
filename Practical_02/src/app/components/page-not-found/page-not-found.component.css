@@ -1,0 +1,22 @@
+.container {
+    max-width: 1200px;  
+    margin: 0 auto;   
+    padding: 20px;
+    background-color: #a6b5c3;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #4e5e72;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+a:hover{
+    background-color: #3e4a59;
+}

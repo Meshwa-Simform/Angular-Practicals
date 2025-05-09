@@ -1,0 +1,25 @@
+.nav {
+    max-width: 1200px; 
+    margin: 0 auto;     
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #3e4a59;
+    padding: 10px 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.nav .notes a,
+.nav .new-note a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav .notes a:hover,
+.nav .new-note a:hover {
+    background-color: #5c6b73;
+}
